@@ -150,6 +150,9 @@ fun tablaDeMultiplicar() {
             }
         }
     }
+        if((edad<6) or (edad>12)){
+            println("No estas en el rango de edad adecuado")
+        }
     }catch (e:Exception){
         println("No has introducido correctamente los valores especificados")
     }
