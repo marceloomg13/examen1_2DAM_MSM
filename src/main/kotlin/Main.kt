@@ -5,21 +5,11 @@ fun tablaDeMultiplicar() {
     var edad:Int=0
     var mes:Int=0
     try {
-        println("Introduce tu edad")
-        edad= readLine().toString().toInt()
-        println("")
-        println("Introduce tu mes de nacimiento")
-        mes= readLine().toString().toInt()
-        /*val str = readLine().toString()
-        val sCadena = str.substring(str.indexOf("(") + 1, str.indexOf(")"))
-        val s: List<String> = sCadena.split(",")
-        edad=s[0].toInt()
-        mes=s[1].toInt()
-        print(edad)
-        print(mes)*/
-    }catch (e:Exception){
-        println("No has introducido correctamente los valores especificados")
-    }
+        println("Introduce tu edad y mes de nacimiento(Separado por una coma)")
+        var st:String= readLine().toString()
+        edad = st!!.split(",")[0].toInt()
+        mes= st!!.split(",")[1].toInt()
+
     println("*********************************************")
     println("PROGRAMA DE GENERACIÓN DE TABLAS: <MARCELO>")
     println("---------------------------------------------")
@@ -159,5 +149,8 @@ fun tablaDeMultiplicar() {
                 println("16 * " + i + " = " + 16 * i)
             }
         }
+    }
+    }catch (e:Exception){
+        println("No has introducido correctamente los valores especificados")
     }
 }
